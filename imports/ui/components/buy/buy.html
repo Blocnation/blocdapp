@@ -1,0 +1,55 @@
+<template name="buy">
+  <div class="col-sm-9 col-lg-10">
+    <div class="wallet buy">
+  <h2>Buy BNTN</h2>
+
+
+  {{#unless ready}}<span><p>Syncing orderbook {{> sloader}}</p></span> {{/unless}}
+  {{#if ready}}
+
+  <div class="input-group buy">
+    <input type="number" id="bntnbuyamount" class="form-control send bntnbuyamount" aria-label="Amount" placeholder="Amount" step="1000" value="0"><button class="btn btn-default buybloc" disabled={{buyDisabled}} type="button"><i class="glyphicon glyphicon-shopping-cart"></i> Buy</button>
+  </div>
+  {{/if}}
+
+  <span><p>Price per BNTN: {{pricekmd}} KMD | {{priceqtum}} QTUM | {{pricebtc}} BTC</p></span>
+
+  </div>
+  <br>
+  <div class="wallet buy">
+  <h4>Your participations:</h4>
+    <table class="table table-bordered swaps">
+    <thead>
+    <tr>
+      <th>tradeid</th>
+      <th>BNTN amount</th>
+      <th>status</th>
+      <th>price per BNTN</th>
+      <th>paid with</th>
+      <th>date</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#each swaps}}
+      {{> swap}}
+    {{/each}}
+    </tbody>
+    </table>
+
+</div>
+</div>
+</template>
+
+<template name="swap">
+<tr>
+<td>{{tradeid}}</td>
+<td>{{value}}</td>
+<td>{{#unless timedout}}[{{step}}/4]{{/unless}} {{status}} {{#unless finished}} {{> sloader}} {{/unless}}{{#if finished}}{{#unless timedout}}{{> check}}{{/unless}}{{/if}}</td>
+<td>{{price}}</td>
+<td>{{paycoin}}</td>
+<td>{{#unless matched}}{{finishtime}}{{/unless}}{{#if matched}}matched {{> check}}{{/if}}</td>
+</tr>
+</template>
+
+<!-- {{#unless finished}} {{> sloader}} {{/unless}}{{#if finished}}{{> check}}{{/if}} -->

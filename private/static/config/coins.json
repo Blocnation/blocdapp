@@ -1,0 +1,1 @@
+[{"coin":"QTUM","name":"qtum","pubtype":58,"rpcport":3889,"p2shtype":50,"wiftype":128,"txfee":400000},{"coin":"BEER","asset":"BEER","active":1,"rpcport":8923},{"coin":"BNTN","asset":"BNTN","active":1,"rpcport":14358},{"coin":"LTC","name":"litecoin","rpcport":9332,"pubtype":48,"p2shtype":5,"wiftype":176,"txfee":100000 }]
