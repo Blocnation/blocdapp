@@ -521,7 +521,7 @@ Meteor.methods({
                     data: buyparams,
                     timeout: 90000
                 });
-                console.log("You are spending: " + relvolume.toFixed(3) + " KMD for " + Number(bufprice / numcoin).toFixed(3) + "KMD each and resulting in " + relvolume.toFixed(3) / Number(bufprice / numcoin).toFixed(3) + "MNZ");
+                console.log("You are spending: " + relvolume.toFixed(3) + " KMD for " + Number(bufprice / numcoin).toFixed(3) + "KMD each and resulting in " + relvolume.toFixed(3) / Number(bufprice / numcoin).toFixed(3) + "BNTN");
                 console.log("buy call response1: " + JSON.parse(result));
                 console.log("UTXO autosplit TX INFO: " + result.content);
             } catch (e) {
