@@ -142,7 +142,7 @@ Meteor.methods({
             'netid': 3337,
             'seednode': '46.4.61.190'
         };
-        console.log("using passphrase: " + passphrase);
+        //console.log("using passphrase: " + passphrase);
         Meteor.sleep(2000);
         try {
             console.log("ISSUING login call");
