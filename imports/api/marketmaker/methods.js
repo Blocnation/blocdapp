@@ -131,7 +131,7 @@ Meteor.methods({
         } catch (e) {
             throw new Meteor.Error(JSON.parse(e));
         }
-        console.log(passphrase);
+        //console.log(passphrase);
 
         const setparams = {
             'userpass': '1d8b27b21efabcd96571cd56f91a40fb9aa4cc623d273c63bf9223dc6f8cd81f',
@@ -152,12 +152,12 @@ Meteor.methods({
 
             console.log("login result: " + result);
             var userpass = JSON.parse(result.content).userpass;
-            console.log("userpass: " + userpass);
+            //console.log("userpass: " + userpass);
 
 
             try {
-                console.log("set pass");
-                console.log(JSON.parse(result.content));
+                //console.log("set pass");
+                //console.log(JSON.parse(result.content));
 
                 Userdata.insert({
                     key: "userpass",
